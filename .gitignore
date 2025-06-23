@@ -1,0 +1,7 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/JapaneseTraining/JapaneseTraining/Form1.cs
+/JapaneseTraining/.vs
+/JapaneseTraining/JapaneseTraining/obj
