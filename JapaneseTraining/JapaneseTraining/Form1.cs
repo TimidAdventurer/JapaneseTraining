@@ -6,7 +6,7 @@ namespace JapaneseTraining
     public partial class Form1 : Form
     {
         List<Word> words = new List<Word>();
-        public string[] SimulatorListKeys = { "Chinese", "Japanese", "pos" };
+        public string[] SimulatorListKeys = { "Chinese", "Japanese", "pos" };//导入的csv文件的表头
         public Form1()
         {
             InitializeComponent();
