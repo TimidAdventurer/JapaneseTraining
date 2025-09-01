@@ -14,17 +14,15 @@
         /// 词性
         /// </summary>
         public Pos pos { get; set; }
-
     }
     public enum Pos
     {
-        //名词、动词、形容词、副词、助词、连词
         None,
-        Nouns,
-        Verbs,
-        Adjectives,
-        Adverbs,
-        Particles,
-        Conjunctions
+        Nouns,//名词
+        Verbs,//动词
+        Adjectives,//形容词
+        Adverbs,//副词
+        Particles,//助词
+        Conjunctions//连词
     }
 }

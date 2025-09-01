@@ -7,6 +7,7 @@ namespace JapaneseTraining
     {
         List<Word> words = new List<Word>();
         public string[] SimulatorListKeys = { "Chinese", "Japanese", "pos" };//导入的csv文件的表头
+
         public Form1()
         {
             InitializeComponent();
@@ -95,6 +96,12 @@ namespace JapaneseTraining
             }
             return result;
         }
+
+        /// <summary>
+        /// 创建CSV文件
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <param name="keys"></param>
         public void CreateCSVFile(string filePath, string[] keys)
         {
             if (string.IsNullOrEmpty(filePath) || File.Exists(filePath) || keys == null)
@@ -111,6 +118,5 @@ namespace JapaneseTraining
                 MessageBox.Show(ex.Message, "Error");
             }
         }
-
     }
 }
