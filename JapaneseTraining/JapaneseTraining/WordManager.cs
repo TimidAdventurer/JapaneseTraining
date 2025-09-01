@@ -2,8 +2,16 @@
 
 namespace JapaneseTraining
 {
+    /// <summary>
+    /// 与单词相关的操作
+    /// </summary>
     public class WordManager
     {
+        /// <summary>
+        /// 将string型词性转换成Pos类型
+        /// </summary>
+        /// <param name="before"></param>
+        /// <returns></returns>
         public static Pos ConvertStringToPos(string before)
         {
             Pos after = new Pos();

@@ -2,26 +2,29 @@
 {
     public class CSVManager
     {
-        public CSVManager()
+        /// <summary>
+        /// 通过路径路径获取CSV数据
+        /// </summary>
+        /// <returns></returns>
+        public static List<string[]> GetCSVFileContent(string csvFilePath)
         {
-            string filePath = @"C:\path\to\your\file.csv"; // 替换为你的CSV文件路径
             try
             {
-                using (StreamReader sr = new StreamReader(filePath))
+                List<string[]> datas = new List<string[]>();
+                using (StreamReader sr = new StreamReader(csvFilePath))
                 {
                     string line;
                     while ((line = sr.ReadLine()) != null)
                     {
-                        string[] data = line.Split(','); // 假设CSV文件使用逗号作为分隔符
-                                                         // 处理数据，例如打印到控制台
-                        Console.WriteLine(string.Join(" | ", data));
+                        string[] data = line.Split(','); // 假设CSV文件使用逗号作为分隔符\
+                        datas.Add(data);
                     }
                 }
+                return datas;
             }
-            catch (Exception e)
+            catch
             {
-                Console.WriteLine("The file could not be read:");
-                Console.WriteLine(e.Message);
+                return null;
             }
         }
     }
